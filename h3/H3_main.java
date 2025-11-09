@@ -9,7 +9,6 @@ public class H3_main {
         int freiePlaetze = max - fix;
         int zuweisen = Math.min(freiePlaetze, wartend);
 
-
         
         fix += zuweisen;
         wartend -= zuweisen;
