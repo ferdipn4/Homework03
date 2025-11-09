@@ -1,30 +1,27 @@
 public class H1_main {
-
     public static void main(String[] args) {
+        int zone = 4;
+        double price = 0.00;
 
-        double guthaben = -100;
-        double monEingang = 200;
-        int rating = -2;
-        boolean warnhinweis = false;
-        boolean negativ = false;
-
-        if (guthaben < 0) {
-            negativ = true;
-            if (Math.abs(monEingang) >= Math.abs(guthaben)) {
-                rating = rating + 1;
-            } else {
-                rating = rating - 1;
+        switch (zone) {
+            case 1:
+                price = 2.00;
+                break;
+            case 2:
+                price = 2.35;
+                break;
+            case 3:
+            case 4:
+                price = 2.85;
+                break;
+            case 5:
+                price = 3.55;
+                break;
+            default:
+                price = 4.00;
+                break;
+                  
             }
-        } else if (guthaben > 0) {
-            rating = rating + 3;
-        } else {
-            rating = rating + 2;
-        }
-
-        if (guthaben < 0 && Math.abs(monEingang) < Math.abs(guthaben) && rating < 0) {
-            warnhinweis = true;
-        } else {
-            warnhinweis = false;
-        }
+        System.out.println(price);
     }
 }
