@@ -10,6 +10,7 @@ public class H3_main {
         int zuweisen = Math.min(freiePlaetze, wartend);
 
 
+        
         fix += zuweisen;
         wartend -= zuweisen;
         istVoll = (fix >= max);
